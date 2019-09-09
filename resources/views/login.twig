@@ -2,41 +2,77 @@
 
 {% block content %}
 
-    <div class="bg-indigo-900 text-center py-1 lg:px-1">
-        <div class="p-2 bg-indigo-800 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex" role="alert">
-            <span class="flex rounded-full bg-indigo-500 uppercase px-2 py-1 text-xs font-bold mr-3">New</span>
-            <span class="font-semibold mr-2 text-left flex-auto">Get the coolest t-shirts from our brand new store</span>
-            <svg class="fill-current opacity-75 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"/></svg>
-        </div>
-    </div>
+    {% set form = form('login').redirect('admin').get() %}
 
-    <div class="w-full max-w-xs">
-        <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-            <div class="mb-4">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
-                    Username
-                </label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username">
+    <div class="flex h-screen items-stretch">
+        <div class="w-1/2 flex justify-center items-center bg-white overflow-hidden p-4 px-3 py-10 bg-gray-200 flex justify-center border-gray-500 border-0 border-r-2">
+
+            <div class="w-full max-w-xs position-relative">
+                {{ form.open({'class': 'bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 fadeIn fast animated'})|raw }}
+                <div class="mb-4">
+
+                    {% if setting_value('anomaly.module.users::login') == 'username' %}
+
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+                            Username
+                        </label>
+
+                        {#{{ form.fields.username.setPlaceholder(form.fields.username.label).addAttribute('autofocus', 1).input|raw }}#}
+                    {% else %}
+
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+                            Email
+                        </label>
+
+                        {#{{ form.fields.email.setPlaceholder(form.fields.email.label).addAttribute('autofocus', 1).input|raw }}#}
+                    {% endif %}
+
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                           id="username" type="text" placeholder="Username" autofocus>
+                </div>
+                <div class="mb-6">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+                        Password
+                    </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                           id="password" type="password" placeholder="******************">
+                </div>
+                <div class="flex items-center justify-between">
+                    <button class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                            type="button">
+                        {{ trans('anomaly.module.users::button.login') }}
+                    </button>
+                </div>
+                {{ form.close|raw }}
+
+                <a class="inline-block align-baseline font-bold text-xs text-bold text-gray-500 hover:text-gray-800 py-2 px-4 rounded focus:outline-none focus:shadow-outline" href="#">
+                    {{ trans('anomaly.module.users::message.forgot_password') }}
+                </a>
+
             </div>
-            <div class="mb-6">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
-                    Password
-                </label>
-                <input class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="******************">
-                <p class="text-red-500 text-xs italic">Please choose a password.</p>
+
+            <div class="absolute bottom-0 left-0 ml-2 mb-2 text-gray-500 text-xs fadeInUp animated delay-1s">
+                PYRO <span>{{ config('streams::distribution.version') }}</span>
+
+                <span class="fadeOutUp animated delay-4s">...</span>
+                <span class="text-green-500 fadeInUp animated delay-4s">System OK</span>
             </div>
-            <div class="flex items-center justify-between">
-                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
-                    Sign In
-                </button>
-                <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="#">
-                    Forgot Password?
+
+            <div class="absolute bottom-0 right-0 mb-2 mr-2">
+                <a href="https://pyrocms.com/" class="p-2 bg-indigo-800 hover:bg-indigo-700 transition-bg items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex" target="_blank">
+                    <span class="flex rounded-full bg-indigo-500 uppercase px-2 py-1 text-xs font-bold mr-3">New</span>
+                    <span class="font-semibold mr-2 text-left flex-auto">v3.7 Released</span>
+                    <svg class="fill-current opacity-75 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"/></svg>
                 </a>
             </div>
-        </form>
-        <p class="text-center text-gray-500 text-xs">
-            &copy;2019 Acme Corp. All rights reserved.
-        </p>
+
+        </div>
+        <div class="w-1/2 flex justify-center align-center items-center bg-blue-500">
+
+            <div class="svg-fill-white fadeIn fast animated">
+                {{ img('pyrocms.theme.afterburner::img/logo.svg').data|raw }}
+            </div>
+        </div>
     </div>
 
 {% endblock %}

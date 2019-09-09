@@ -18,14 +18,12 @@
 
 <body>
 
-<main id="main">
-    <div class="container">
+<main id="app">
 
-        {% include "theme::partials/messages" %}
+    {% include "theme::partials/messages" %}
 
-        {% block content %}{% endblock %}
+    {% block content %}{% endblock %}
 
-    </div>
 </main>
 
 {% include "theme::partials/assets" %}

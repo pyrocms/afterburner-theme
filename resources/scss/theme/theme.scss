@@ -1,7 +1,12 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+@import "tailwindcss/utilities";
 
-.h-half {
-    height: 50vh;
+@import "../../../node_modules/animate.css/animate.css";
+
+.svg-fill-white {
+    path {
+        fill: white;
+    }
 }

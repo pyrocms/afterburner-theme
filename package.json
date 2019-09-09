@@ -18,6 +18,8 @@
         "sass-loader": "^7.3.1",
         "tailwindcss": "^1.1.2",
         "popper.js": "^1.12",
-        "resolve-url-loader": "^2.3.1"
+        "animate.css": "^3.7.2",
+        "resolve-url-loader": "^2.3.1",
+        "tailwindcss-transitions": "^2.1.0"
     }
 }
