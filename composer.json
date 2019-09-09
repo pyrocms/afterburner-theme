@@ -1,0 +1,9 @@
+{
+    "name": "pyrocms/afterburner-theme",
+    "type": "streams-addon",
+    "autoload": {
+        "psr-4": {
+            "Pyrocms\\AfterburnerTheme\\": "src/"
+        }
+    }
+}
