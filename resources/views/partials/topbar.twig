@@ -1,0 +1,78 @@
+<nav class="flex items-center justify-between flex-wrap bg-white border-b border-gray-200 p-6">
+
+    <div class="flex items-center flex-shrink-0 text-white mr-6 cp-brand">
+        {{ img('pyrocms.theme.afterburner::img/logo.svg').data|raw }}
+    </div>
+
+    <div class="block lg:hidden">
+        <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title>
+                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+            </svg>
+        </button>
+    </div>
+
+    <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+        <div class="text-sm lg:flex-grow">
+
+            {% for shortcut in template.cp.shortcuts %}
+                <a class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 hover:text-red-500 transition-color mr-4" {{ html_attributes(shortcut.attributes) }}>
+                    {{ icon(shortcut.icon) }}
+                </a>
+            {% endfor %}
+            {% if template.module.composer_json.support %}
+                <a href="#" data-toggle="dropdown">
+                    {{ icon('fa fa-life-ring') }}
+                </a>
+
+                {#<ul class="dropdown-menu-right dropdown-menu">#}
+                    {#<li class="dropdown-header">#}
+                        {#{{ trans('streams::support.support', {'type': trans(template.module.title)}) }}#}
+                    {#</li>#}
+                    {#<li class="dropdown-divider"></li>#}
+                    {#{% for type, value in template.module.composer_json.support %}#}
+                        {#{% if type == 'email' %}#}
+                            {#<li class="dropdown-item">#}
+                                {#<a href="mailto:{{ value }}">#}
+                                    {#{{ value }}#}
+                                {#</a>#}
+                            {#</li>#}
+                        {#{% else %}#}
+                            {#<li class="dropdown-item">#}
+                                {#<a href="{{ value }}" target="_blank">#}
+                                    {#{{ trans('streams::support.' ~ type) }}#}
+                                {#</a>#}
+                            {#</li>#}
+                        {#{% endif %}#}
+                    {#{% endfor %}#}
+                    {#<li class="dropdown-divider"></li>#}
+                    {#<li class="dropdown-item">#}
+                        {#<a href="#" data-toggle="modal" data-target="#modal-help">#}
+                            {#{{ trans('streams::support.more') }}#}
+                        {#</a>#}
+                    {#</li>#}
+                {#</ul>#}
+            {% endif %}
+            {#<ul class="dropdown-menu-right dropdown-menu">#}
+                {#<li class="dropdown-item">#}
+                    {#<a href="/" target="_blank">#}
+                        {#<i class="fa fa-external-link"></i>#}
+                        {#{{ trans('theme::control_panel.view_site') }}#}
+                    {#</a>#}
+                {#</li>#}
+                {#<li class="dropdown-item">#}
+                    {#<a href="/admin/logout">#}
+                        {#<i class="fa fa-power-off"></i>#}
+                        {#{{ trans('theme::control_panel.logout') }}#}
+                    {#</a>#}
+                {#</li>#}
+            {#</ul>#}
+
+        </div>
+        <div>
+            <a href="javascript:void(0);" data-toggle="dropdown" class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 hover:text-red-500">
+                <img src="{{ user().gravatar.path }}" width="36" class="rounded-full">
+            </a>
+        </div>
+    </div>
+</nav>

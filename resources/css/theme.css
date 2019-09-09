@@ -3792,6 +3792,15 @@ video {
   fill: white;
 }
 
+.cp-brand svg {
+  width: 40px;
+  height: 40px;
+}
+
+.cp-brand svg path {
+  fill: #a0aec0;
+}
+
 .will-change-auto{
   will-change: auto;
 }
@@ -13494,6 +13503,70 @@ video {
   background-position: top;
 }
 
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.not-sr-only{
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+.focus\:sr-only:focus{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.focus\:not-sr-only:focus{
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+.appearance-none{
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.bg-fixed{
+  background-attachment: fixed;
+}
+
+.bg-local{
+  background-attachment: local;
+}
+
+.bg-scroll{
+  background-attachment: scroll;
+}
+
 .bg-transparent{
   background-color: transparent;
 }
@@ -14608,70 +14681,6 @@ video {
 
 .focus\:bg-pink-900:focus{
   background-color: #e83e8c;
-}
-
-.bg-fixed{
-  background-attachment: fixed;
-}
-
-.bg-local{
-  background-attachment: local;
-}
-
-.bg-scroll{
-  background-attachment: scroll;
-}
-
-.sr-only{
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-}
-
-.not-sr-only{
-  position: static;
-  width: auto;
-  height: auto;
-  padding: 0;
-  margin: 0;
-  overflow: visible;
-  clip: auto;
-  white-space: normal;
-}
-
-.focus\:sr-only:focus{
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-}
-
-.focus\:not-sr-only:focus{
-  position: static;
-  width: auto;
-  height: auto;
-  padding: 0;
-  margin: 0;
-  overflow: visible;
-  clip: auto;
-  white-space: normal;
-}
-
-.appearance-none{
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
 }
 
 @media (min-width: 640px){
@@ -24377,6 +24386,70 @@ video {
     background-position: top;
   }
 
+  .sm\:sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .sm\:not-sr-only{
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+
+  .sm\:focus\:sr-only:focus{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .sm\:focus\:not-sr-only:focus{
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+
+  .sm\:appearance-none{
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+  }
+
+  .sm\:bg-fixed{
+    background-attachment: fixed;
+  }
+
+  .sm\:bg-local{
+    background-attachment: local;
+  }
+
+  .sm\:bg-scroll{
+    background-attachment: scroll;
+  }
+
   .sm\:bg-transparent{
     background-color: transparent;
   }
@@ -25491,70 +25564,6 @@ video {
 
   .sm\:focus\:bg-pink-900:focus{
     background-color: #e83e8c;
-  }
-
-  .sm\:bg-fixed{
-    background-attachment: fixed;
-  }
-
-  .sm\:bg-local{
-    background-attachment: local;
-  }
-
-  .sm\:bg-scroll{
-    background-attachment: scroll;
-  }
-
-  .sm\:sr-only{
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
-  }
-
-  .sm\:not-sr-only{
-    position: static;
-    width: auto;
-    height: auto;
-    padding: 0;
-    margin: 0;
-    overflow: visible;
-    clip: auto;
-    white-space: normal;
-  }
-
-  .sm\:focus\:sr-only:focus{
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
-  }
-
-  .sm\:focus\:not-sr-only:focus{
-    position: static;
-    width: auto;
-    height: auto;
-    padding: 0;
-    margin: 0;
-    overflow: visible;
-    clip: auto;
-    white-space: normal;
-  }
-
-  .sm\:appearance-none{
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
   }
 }
 
@@ -35261,6 +35270,70 @@ video {
     background-position: top;
   }
 
+  .md\:sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .md\:not-sr-only{
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+
+  .md\:focus\:sr-only:focus{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .md\:focus\:not-sr-only:focus{
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+
+  .md\:appearance-none{
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+  }
+
+  .md\:bg-fixed{
+    background-attachment: fixed;
+  }
+
+  .md\:bg-local{
+    background-attachment: local;
+  }
+
+  .md\:bg-scroll{
+    background-attachment: scroll;
+  }
+
   .md\:bg-transparent{
     background-color: transparent;
   }
@@ -36375,70 +36448,6 @@ video {
 
   .md\:focus\:bg-pink-900:focus{
     background-color: #e83e8c;
-  }
-
-  .md\:bg-fixed{
-    background-attachment: fixed;
-  }
-
-  .md\:bg-local{
-    background-attachment: local;
-  }
-
-  .md\:bg-scroll{
-    background-attachment: scroll;
-  }
-
-  .md\:sr-only{
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
-  }
-
-  .md\:not-sr-only{
-    position: static;
-    width: auto;
-    height: auto;
-    padding: 0;
-    margin: 0;
-    overflow: visible;
-    clip: auto;
-    white-space: normal;
-  }
-
-  .md\:focus\:sr-only:focus{
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
-  }
-
-  .md\:focus\:not-sr-only:focus{
-    position: static;
-    width: auto;
-    height: auto;
-    padding: 0;
-    margin: 0;
-    overflow: visible;
-    clip: auto;
-    white-space: normal;
-  }
-
-  .md\:appearance-none{
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
   }
 }
 
@@ -46145,6 +46154,70 @@ video {
     background-position: top;
   }
 
+  .lg\:sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .lg\:not-sr-only{
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+
+  .lg\:focus\:sr-only:focus{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .lg\:focus\:not-sr-only:focus{
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+
+  .lg\:appearance-none{
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+  }
+
+  .lg\:bg-fixed{
+    background-attachment: fixed;
+  }
+
+  .lg\:bg-local{
+    background-attachment: local;
+  }
+
+  .lg\:bg-scroll{
+    background-attachment: scroll;
+  }
+
   .lg\:bg-transparent{
     background-color: transparent;
   }
@@ -47259,70 +47332,6 @@ video {
 
   .lg\:focus\:bg-pink-900:focus{
     background-color: #e83e8c;
-  }
-
-  .lg\:bg-fixed{
-    background-attachment: fixed;
-  }
-
-  .lg\:bg-local{
-    background-attachment: local;
-  }
-
-  .lg\:bg-scroll{
-    background-attachment: scroll;
-  }
-
-  .lg\:sr-only{
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
-  }
-
-  .lg\:not-sr-only{
-    position: static;
-    width: auto;
-    height: auto;
-    padding: 0;
-    margin: 0;
-    overflow: visible;
-    clip: auto;
-    white-space: normal;
-  }
-
-  .lg\:focus\:sr-only:focus{
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
-  }
-
-  .lg\:focus\:not-sr-only:focus{
-    position: static;
-    width: auto;
-    height: auto;
-    padding: 0;
-    margin: 0;
-    overflow: visible;
-    clip: auto;
-    white-space: normal;
-  }
-
-  .lg\:appearance-none{
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
   }
 }
 
@@ -57029,6 +57038,70 @@ video {
     background-position: top;
   }
 
+  .xl\:sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .xl\:not-sr-only{
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+
+  .xl\:focus\:sr-only:focus{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .xl\:focus\:not-sr-only:focus{
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+
+  .xl\:appearance-none{
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+  }
+
+  .xl\:bg-fixed{
+    background-attachment: fixed;
+  }
+
+  .xl\:bg-local{
+    background-attachment: local;
+  }
+
+  .xl\:bg-scroll{
+    background-attachment: scroll;
+  }
+
   .xl\:bg-transparent{
     background-color: transparent;
   }
@@ -58143,69 +58216,5 @@ video {
 
   .xl\:focus\:bg-pink-900:focus{
     background-color: #e83e8c;
-  }
-
-  .xl\:bg-fixed{
-    background-attachment: fixed;
-  }
-
-  .xl\:bg-local{
-    background-attachment: local;
-  }
-
-  .xl\:bg-scroll{
-    background-attachment: scroll;
-  }
-
-  .xl\:sr-only{
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
-  }
-
-  .xl\:not-sr-only{
-    position: static;
-    width: auto;
-    height: auto;
-    padding: 0;
-    margin: 0;
-    overflow: visible;
-    clip: auto;
-    white-space: normal;
-  }
-
-  .xl\:focus\:sr-only:focus{
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
-  }
-
-  .xl\:focus\:not-sr-only:focus{
-    position: static;
-    width: auto;
-    height: auto;
-    padding: 0;
-    margin: 0;
-    overflow: visible;
-    clip: auto;
-    white-space: normal;
-  }
-
-  .xl\:appearance-none{
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
   }
 }
