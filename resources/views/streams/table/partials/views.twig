@@ -3,7 +3,7 @@
 
         {% for view in table.views %}
             <a
-                    class="px-3 py-2 mx-1 text-gray-300 hover:bg-gray-100 transition-all rounded {{ view.class }} {{ view.isActive() ? 'text-blue-500' }}"
+                    class="px-3 py-2 text-gray-300 hover:bg-gray-100 transition-all rounded {{ view.class }} {{ view.isActive() ? 'text-blue-500' }}"
                     {{ html_attributes(view.attributes) }}>
                 {{ view.icon ? icon(view.icon)|raw }}
                 {{ trans(view.getText()) }}
