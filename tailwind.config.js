@@ -74,5 +74,6 @@ module.exports = {
     },
     plugins:[
         require('tailwindcss-transitions')(),
+        require('@tailwindcss/custom-forms'),
     ]
 };
