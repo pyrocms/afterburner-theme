@@ -3,22 +3,19 @@
 @import "tailwindcss/utilities";
 @import "tailwindcss/utilities";
 
+@import "simplebar";
+
 @import "../../../node_modules/animate.css/animate.css";
+
+@import "layout/top";
+@import "layout/main";
+@import "layout/menu";
+@import "layout/sidebar";
+
+@import "components/dropdowns";
 
 .svg-fill-white {
     path {
         fill: white;
-    }
-}
-
-.cp-brand {
-
-    svg {
-        width: 40px;
-        height: 40px;
-
-        path {
-            fill: theme('colors.gray.500');
-        }
     }
 }

@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'title'       => 'Afterburner',
-    'name'        => 'Afterburner Theme',
-    'description' => ''
+    'title'       => 'Accelerant (2)',
+    'name'        => 'Accelerant Theme',
+    'description' => 'The official admin theme for PyroCMS.',
 ];

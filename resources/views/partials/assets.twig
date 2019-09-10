@@ -3,12 +3,12 @@
 #}
 
 {# Core Theme Components #}
-{{ asset_add("theme.js", "theme::js/vendor/vue.min.js") }}
-{{ asset_add("theme.js", "theme::js/vendor/bootstrap.min.js") }}
+{{ asset_add("theme.js", "pyrocms.theme.afterburner::js/vendor/vue.min.js") }}
+{{ asset_add("theme.js", "pyrocms.theme.afterburner::js/vendor/bootstrap.min.js") }}
 
 {# Theme Scripts #}
-{{ asset_add("theme.js", "theme::js/plugins/*") }}
-{{ asset_add("theme.js", "theme::js/theme/initialize.js") }}
+{{ asset_add("theme.js", "pyrocms.theme.afterburner::js/plugins/*") }}
+{{ asset_add("theme.js", "pyrocms.theme.afterburner::js/theme/initialize.js") }}
 
 {{ asset_script("theme.js", ["min"]) }}
 

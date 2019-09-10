@@ -1,0 +1,17 @@
+<aside id="sidebar" class="w-56 p-6">
+
+    <ul class="">
+        {% for key, navigation in template.cp.navigation %}
+            <li data-slug="{{ navigation.slug }}">
+                <a
+                        class="text-gray-600 py-2 block hover:text-gray-800 transition-color {{ navigation.active ? 'text-gray-800 font-bold' }}"
+                        title="{{ trans(navigation.title) }}"
+                        {{ html_attributes(navigation.attributes) }}>
+                    {#<span class="icon">{{ navigation.icon()|raw }}</span>#}
+                    <span class="title">{{ trans(navigation.title) }}</span>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+
+</aside>

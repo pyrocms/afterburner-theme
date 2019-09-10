@@ -1,32 +1,21 @@
 {% htmlcompress %}
-<!doctype html>
-
-<!--[if lt IE 7]>
-<html class="nojs ms lt_ie7" lang="en"><![endif]-->
-<!--[if IE 7]>
-<html class="nojs ms ie7" lang="en"><![endif]-->
-<!--[if IE 8]>
-<html class="nojs ms ie8" lang="en"><![endif]-->
-<!--[if gt IE 8]>
-<html class="nojs ms" lang="en"><![endif]-->
-
 <html lang="{{ config('app.locale') }}">
 
 <head>
-    {% include "theme::partials/metadata" %}
+    {% include "pyrocms.theme.afterburner::partials/metadata" %}
 </head>
 
 <body>
 
 <main id="app">
 
-    {% include "theme::partials/messages" %}
+    {% include "pyrocms.theme.afterburner::partials/messages" %}
 
     {% block content %}{% endblock %}
 
 </main>
 
-{% include "theme::partials/assets" %}
+{% include "pyrocms.theme.afterburner::partials/assets" %}
 
 </body>
 </html>
