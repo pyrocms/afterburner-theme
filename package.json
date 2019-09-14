@@ -23,6 +23,7 @@
         "tailwindcss": "^1.1.2",
         "tailwindcss-transitions": "^2.1.0",
         "favicons": "^5.4.1",
+        "vue": "^2.6.10",
         "@tailwindcss/custom-forms": "^0.2.1"
     }
 }
