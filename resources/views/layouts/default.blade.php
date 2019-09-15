@@ -2,7 +2,7 @@
 <html lang="{{ config('app.locale') }}">
 
 <head>
-    @include("theme::partials/metadata")
+    @include('pyrocms.theme.afterburner::partials/metadata')
 </head>
 
 <body>
@@ -18,10 +18,10 @@
 
         <div id="content" class="flex-grow bg-gray-100">
 
-            {{--{% include "pyrocms.theme.afterburner::partials/messages" %}--}}
+            @include('pyrocms.theme.afterburner::partials/messages')
             {{--{#{% include "pyrocms.theme.afterburner::partials/buttons" %}#}--}}
 
-            @yield("content")
+            @yield('content')
 
         </div>
 
