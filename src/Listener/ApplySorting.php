@@ -31,7 +31,7 @@ class ApplySorting
     /**
      * Create a new ApplySorting instance.
      *
-     * @param SettingRepositoryInterface    $settings
+     * @param SettingRepositoryInterface $settings
      * @param PreferenceRepositoryInterface $preferences
      */
     public function __construct(SettingRepositoryInterface $settings, PreferenceRepositoryInterface $preferences)
