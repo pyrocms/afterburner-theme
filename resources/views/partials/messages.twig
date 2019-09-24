@@ -33,7 +33,7 @@
         {% for message in message_pull('error') %}
             <toaster :open=true
                      timeout="0"
-                     type="warning"
+                     type="error"
                     {#class="p-6 w-72 bg-orange-500 text-orange-100 color-white rounded mr-3 mb-3"#}
                      message="{{ trans(message)|markdown }}"></toaster>
         {% endfor %}
