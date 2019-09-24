@@ -1,3 +1,8 @@
-import Messages from './components/Messages.vue';
+import Vue from "vue";
+import Toaster from "./components/Messages.vue";
 
-Vue.component('messages', Messages);
+Vue.component('toaster', Toaster);
+
+const app = new Vue({
+    el: '#app'
+});

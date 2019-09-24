@@ -3,7 +3,6 @@
 </template>
 
 <script>
-
     import VueToastr from "vue-toastr";
 
     export default {
@@ -16,30 +15,45 @@
             },
             message: {
                 type: String,
-                required: false
+                required: true
+            },
+            type: {
+                type: String,
+                required: true
+            },
+            position: {
+                type: String,
+                required: false,
+                default: "bottom-right"
             }
         },
         data() {
             return {
-                variable: ""
+                isVisible: false,
+                myToaster: null
             };
         },
-        created() {},
+        created() {
+            this.isVisible = this.open;
+        },
         mounted() {
-            this.$refs.mytoast.defaultPosition = "toast-top-left";
-            this.$refs.mytoast.s(
-                this.message
-            );
-            console.log(this.$refs.mytoast);
-        },
-        watch: {
-            data(newVal, oldVal) {}
-        },
-        computed: {
-            aname() {}
+            if (this.open) {
+                this.openToast();
+            }
         },
         methods: {
-            methodname() {}
+            openToast() {
+
+                this.$refs.mytoast.defaultPosition = "toast-bottom-left";
+
+                this.myToaster = this.$refs.mytoast.Add({
+                    position: "toast-" + this.position,
+                    //name: "UniqName",
+                    msg: this.message,
+                    type: this.type,
+                    timeout: 0,
+                });
+            }
         }
     };
 </script>

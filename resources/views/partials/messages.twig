@@ -1,15 +1,12 @@
-
 <section id="messages" class="fixed bottom-0 right-0">
-
-    <vue-toastr ref="mytoast"></vue-toastr>
 
     <!-- Success Messages -->
     {% if message_exists('success') %}
-        <div class="p-6 w-72 bg-green-500 text-green-100 color-white rounded mr-3 mb-3">
-            {% for message in message_pull('success') %}
-                {{ trans(message)|markdown }}
-            {% endfor %}
-        </div>
+        {% for message in message_pull('success') %}
+            <toaster :open=true
+                     type="success"
+                     message="{{ trans(message)|markdown }}"></toaster>
+        {% endfor %}
     {% endif %}
 
     <!-- Informational Messages -->
