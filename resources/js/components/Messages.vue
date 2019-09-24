@@ -25,6 +25,11 @@
                 type: String,
                 required: false,
                 default: "bottom-right"
+            },
+            timeout: {
+                type: Number,
+                required: false,
+                default: 5000
             }
         },
         data() {
@@ -48,10 +53,10 @@
 
                 this.myToaster = this.$refs.mytoast.Add({
                     position: "toast-" + this.position,
+                    timeout: this.timeout,
                     //name: "UniqName",
                     msg: this.message,
                     type: this.type,
-                    timeout: 0,
                 });
             }
         }

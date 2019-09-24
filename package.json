@@ -26,6 +26,7 @@
         "tailwindcss-transitions": "^2.1.0",
         "vue": "^2.6.10",
         "vue-template-compiler": "^2.6.10",
-        "vue-toastr": "^2.1.2"
+        "vue-toastr": "^2.1.2",
+        "mousetrap": "^1.6.3"
     }
 }

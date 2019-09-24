@@ -1,39 +1,42 @@
 <section id="messages" class="fixed bottom-0 right-0">
 
-    <!-- Success Messages -->
     {% if message_exists('success') %}
         {% for message in message_pull('success') %}
             <toaster :open=true
                      type="success"
+                    {#class="p-6 w-72 bg-green-500 text-green-100 color-white rounded mr-3 mb-3"#}
                      message="{{ trans(message)|markdown }}"></toaster>
         {% endfor %}
     {% endif %}
 
-    <!-- Informational Messages -->
     {% if message_exists('info') %}
-        <div class="p-6 w-72 bg-info-500 text-info-100 color-white rounded mr-3 mb-3">
-            {% for message in message_pull('info') %}
-                {{ trans(message)|markdown }}
-            {% endfor %}
-        </div>
+        {% for message in message_pull('info') %}
+            <toaster :open=true
+                     timeout="0"
+                     type="info"
+                    {#class="p-6 w-72 bg-info-500 text-info-100 color-white rounded mr-3 mb-3"#}
+                     message="{{ trans(message)|markdown }}"></toaster>
+        {% endfor %}
     {% endif %}
 
-    <!-- Warning Messages -->
     {% if message_exists('warning') %}
-        <div class="p-6 w-72 bg-orange-500 text-orange-100 color-white rounded mr-3 mb-3">
-            {% for message in message_pull('warning') %}
-                {{ trans(message)|markdown }}
-            {% endfor %}
-        </div>
+        {% for message in message_pull('warning') %}
+            <toaster :open=true
+                     timeout="0"
+                     type="warning"
+                    {#class="p-6 w-72 bg-orange-500 text-orange-100 color-white rounded mr-3 mb-3"#}
+                     message="{{ trans(message)|markdown }}"></toaster>
+        {% endfor %}
     {% endif %}
 
-    <!-- Error Messages -->
     {% if message_exists('error') %}
-        <div class="p-6 w-72 bg-orange-500 text-orange-100 color-white rounded mr-3 mb-3">
-            {% for message in message_pull('error') %}
-                {{ trans(message)|markdown }}
-            {% endfor %}
-        </div>
+        {% for message in message_pull('error') %}
+            <toaster :open=true
+                     timeout="0"
+                     type="warning"
+                    {#class="p-6 w-72 bg-orange-500 text-orange-100 color-white rounded mr-3 mb-3"#}
+                     message="{{ trans(message)|markdown }}"></toaster>
+        {% endfor %}
     {% endif %}
 
 </section>
