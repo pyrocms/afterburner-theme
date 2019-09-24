@@ -14,9 +14,13 @@ const tailwindcss = require('tailwindcss');
 
 mix
     .sass('resources/scss/theme/theme.scss', 'resources/css')
+    .js([
+        'resources/js/initialize.js'
+    ], 'resources/js/theme.js')
     .options({
         processCssUrls: false,
         postCss: [
             tailwindcss('./tailwind.config.js')
-        ],
-    });
+        ]
+    })
+    .sourceMaps();

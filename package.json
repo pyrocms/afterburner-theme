@@ -10,10 +10,12 @@
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
     },
     "devDependencies": {
+        "@tailwindcss/custom-forms": "^0.2.1",
         "animate.css": "^3.7.2",
         "axios": "^0.19",
         "browser-sync-webpack-plugin": "^2.0.1",
         "cross-env": "^5.1",
+        "favicons": "^5.4.1",
         "laravel-mix": "^4.0",
         "lodash": "^4.17.15",
         "popper.js": "^1.12",
@@ -22,8 +24,8 @@
         "sass-loader": "^7.3.1",
         "tailwindcss": "^1.1.2",
         "tailwindcss-transitions": "^2.1.0",
-        "favicons": "^5.4.1",
         "vue": "^2.6.10",
-        "@tailwindcss/custom-forms": "^0.2.1"
+        "vue-template-compiler": "^2.6.10",
+        "vue-toastr": "^2.1.2"
     }
 }

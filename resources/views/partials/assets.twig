@@ -1,22 +1,14 @@
 {#
     Main CSS can be found in metadata.twig
 #}
-
-{# Core Theme Components #}
-{{ asset_add("theme.js", "pyrocms.theme.afterburner::js/vendor/vue.min.js") }}
-{{ asset_add("theme.js", "pyrocms.theme.afterburner::js/vendor/bootstrap.min.js") }}
-
-{# Theme Scripts #}
-{{ asset_add("theme.js", "pyrocms.theme.afterburner::js/plugins/*") }}
-{{ asset_add("theme.js", "pyrocms.theme.afterburner::js/theme/initialize.js") }}
-
-{{ asset_script("theme.js", ["min"]) }}
+{{ asset_script("pyrocms.theme.afterburner::js/theme.js", ["min", "watch@pyrocms.theme.afterburner::js/theme.js"]) }}
 
 {# Include Scripts Loaded From Outside #}
 {% for script in asset_scripts("scripts.js", ["min"]) %}
     {{ script|raw }}
 {% endfor %}
 
+{# Deferred JS Includes #}
 {{ template.includes.render('scripts')|raw }}
 
 {# Include Styles Loaded From Outside #}
