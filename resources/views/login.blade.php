@@ -2,9 +2,15 @@
 
 @section('content')
     
-    {{ $form = form('login')->redirect('admin')->get() }}
-
-    {{ $color = array_rand(['gray', 'blue', 'indigo', 'pink', 'red', 'orange', 'yellow', 'green', 'teal']) }}
+    @php
+        $form  = form('login')->redirect('admin')->get();
+        
+        $colors = [
+            'gray', 'blue', 'indigo', 'pink', 'red', 'orange', 'yellow', 'green', 'teal'
+        ];
+        
+        $color = $colors[array_rand($colors)];
+    @endphp
 
     <div class="flex h-screen items-stretch">
         <div class="w-1/2 flex justify-center items-center bg-white overflow-hidden p-4 px-3 py-10 bg-gray-200 flex justify-center border-gray-400 border-0 border-r-2">
@@ -55,18 +61,18 @@
                 <span>{{ config('streams::distribution.version') }}</span>
             </div>
 
-            {#<div class="absolute bottom-0 right-0 mb-2 mr-2">#}
-        {#<a href="https://pyrocms.com/" class="p-2 bg-{{ $color }}-800 hover:bg-{{ $color }}-700 transition-bg items-center text-{{ $color }}-100 leading-none lg:rounded-full flex lg:inline-flex" target="_blank">#}
-            {#<span class="flex rounded-full bg-{{ $color }}-500 uppercase px-2 py-1 text-xs font-bold mr-3">New</span>#}
-            {#<span class="font-semibold mr-2 text-left flex-auto">v3.7 Released</span>#}
-            {#<svg class="fill-current opacity-75 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"/></svg>#}
-            {#</a>#}
-            {#</div>#}
+            <div class="absolute bottom-0 right-0 mb-2 mr-2">
+        <a href="https://pyrocms.com/" class="p-2 bg-{{ $color }}-800 hover:bg-{{ $color }}-700 transition-bg items-center text-{{ $color }}-100 leading-none lg:rounded-full flex lg:inline-flex" target="_blank">
+            <span class="flex rounded-full bg-{{ $color }}-500 uppercase px-2 py-1 text-xs font-bold mr-3">New</span>
+            <span class="font-semibold mr-2 text-left flex-auto">v3.7 Released</span>
+            <svg class="fill-current opacity-75 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"/></svg>
+            </a>
+            </div>
 
         </div>
         <div class="w-1/2 flex justify-center align-center items-center bg-{{ $color }}-500">
             <div class="svg-fill-white login-icon fadeIn fast animated">
-                {{ img('pyrocms.theme.afterburner::img/logo.svg')->data() }}
+                {!! img('pyrocms.theme.afterburner::img/logo.svg')->data() !!}
             </div>
         </div>
     </div>
