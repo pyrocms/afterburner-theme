@@ -1,4 +1,4 @@
-<section id="messages" class="fixed bottom-0 right-0">
+{{-- <section id="messages" class="fixed bottom-0 right-0">
 
     {% if message_exists('success') %}
         {% for message in message_pull('success') %}
@@ -25,3 +25,4 @@
     {% endif %}
 
 </section>
+--}}
