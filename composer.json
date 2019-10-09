@@ -8,8 +8,7 @@
     ],
     "homepage": "http://pyrocms.com/addons/pyrocms/afterburner-theme",
     "license": "MIT",
-    "authors": [
-        {
+    "authors": [{
             "name": "PyroCMS, Inc.",
             "homepage": "http://pyrocms.com/",
             "role": "Owner"
@@ -21,8 +20,6 @@
         }
     ],
     "require": {
-        "anomaly/settings-module": "^3.0",
-        "anomaly/preferences-module": "^3.0",
         "anomaly/streams-platform": "^2.0"
     },
     "autoload": {
