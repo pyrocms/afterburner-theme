@@ -26,5 +26,12 @@
         "psr-4": {
             "Pyrocms\\AfterburnerTheme\\": "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Pyrocms\\AfterburnerTheme\\AfterburnerThemeServiceProvider"
+            ]
+        }
     }
 }

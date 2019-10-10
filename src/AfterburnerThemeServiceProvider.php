@@ -18,10 +18,15 @@ class AfterburnerThemeServiceProvider extends AddonServiceProvider
      *
      * @var array
      */
-    protected $overrides = [
+    public $overrides = [
         'streams::table.table' => 'pyrocms.theme.afterburner::streams.table.table',
         'streams::table.partials.views' => 'pyrocms.theme.afterburner::streams.table.partials.views',
         'streams::table.partials.filters' => 'pyrocms.theme.afterburner::streams.table.partials.filters',
         'streams::table.partials.heading' => 'pyrocms.theme.afterburner::streams.table.partials.heading',
     ];
+
+    public function register()
+    {
+        dd('# code...');
+    }
 }
