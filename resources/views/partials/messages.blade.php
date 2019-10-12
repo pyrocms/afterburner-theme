@@ -14,13 +14,13 @@
 
     @if (app('messages')->has('warning'))
         @foreach (app('messages')->pull('warning') as $message)
-            <toaster :open="true" type="warning" class="p-6 w-72 bg-blue-500 text-yellow-100 color-white rounded mr-3 mb-3" message="{{ markdown(trans($message)) }}"></toaster>  
+            <toaster :open="true" type="warning" class="p-6 w-72 bg-orange-500 text-yellow-100 color-white rounded mr-3 mb-3" message="{{ markdown(trans($message)) }}"></toaster>  
         @endforeach
     @endif
 
     @if (app('messages')->has('error'))
         @foreach (app('messages')->pull('error') as $message)
-            <toaster :open="true" type="error" class="p-6 w-72 bg-orange-500 text-yellow-100 color-white rounded mr-3 mb-3" message="{{ markdown(trans($message)) }}"></toaster>  
+            <toaster :open="true" type="error" class="p-6 w-72 bg-error-500 text-yellow-100 color-white rounded mr-3 mb-3" message="{{ markdown(trans($message)) }}"></toaster>  
         @endforeach
     @endif
 

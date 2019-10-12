@@ -24,9 +24,4 @@ class AfterburnerThemeServiceProvider extends AddonServiceProvider
         'streams::table.partials.filters' => 'pyrocms.theme.afterburner::streams.table.partials.filters',
         'streams::table.partials.heading' => 'pyrocms.theme.afterburner::streams.table.partials.heading',
     ];
-
-    public function register()
-    {
-        dd('# code...');
-    }
 }
