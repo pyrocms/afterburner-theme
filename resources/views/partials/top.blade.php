@@ -1,7 +1,7 @@
 <div id="top" class="flex items-center justify-between flex-wrap bg-white border-b border-gray-200 p-6">
 
     <div class="flex items-center flex-shrink-0 text-white mr-6 cp-brand">
-        {{ img('pyrocms.theme.afterburner::img/logo.svg').data|raw }}
+        {!! img('pyrocms.theme.afterburner::img/logo.svg')->data() !!}
     </div>
 
     <div class="block lg:hidden">
@@ -15,13 +15,14 @@
     <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
         <div class="text-sm lg:flex-grow">
 
-            {% for shortcut in template.cp.shortcuts %}
-                <a class="block mt-4 lg:inline-block lg:mt-0 text-gray-500 hover:text-red-500 transition-color mr-4" {{ html_attributes(shortcut.attributes) }}>
-                    {{ icon(shortcut.icon) }}
-                    {{ shortcut.icon }}
-                </a>
-            {% endfor %}
-            {#{% if template.module.composer_json.support %}#}
+            @foreach ($template->get('cp')->getShortcuts() as $shortcut)
+            <a class="block mt-4 lg:inline-block lg:mt-0 text-gray-500 hover:text-red-500 transition-color mr-4" {{ html_attributes($shortcut->getAttributes()) }}>
+                {{-- {{ icon(shortcut.icon) }} --}}
+                {{ $shortcut->getIcon() }}
+            </a>                
+            @endforeach
+
+            {{-- {#{% if template.module.composer_json.support %}#}
                 {#<a href="#" data-toggle="dropdown">#}
                     {#{{ icon('fa fa-life-ring') }}#}
                 {#</a>#}
@@ -53,7 +54,7 @@
                         {#</a>#}
                     {#</li>#}
                 {#</ul>#}
-            {#{% endif %}#}
+            {#{% endif %}#} --}}
 
         </div>
         <div class="flex">
@@ -65,7 +66,7 @@
             </a>
             <a href="/users/self" target="_blank"
                class="mt-4 ml-6 lg:inline-block lg:mt-0 text-gray-800 hover:text-red-500">
-                <img src="{{ user().gravatar.path }}" width="36" class="rounded-full">
+                <img src="{{ user()->decorate->gravatar->path() }}" width="36" class="rounded-full">
             </a>
         </div>
     </div>

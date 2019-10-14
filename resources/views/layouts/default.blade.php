@@ -9,12 +9,12 @@
 
 <div id="app">
 
-    {{-- {% include "pyrocms.theme.afterburner::partials/top" %} --}}
+    @include('pyrocms.theme.afterburner::partials/top')
 
     <div id="main" class="flex">
 
-        {{-- {% include "pyrocms.theme.afterburner::partials/sidebar" %}
-        {% include "pyrocms.theme.afterburner::partials/menu" %} --}}
+        @include('pyrocms.theme.afterburner::partials/sidebar')
+        @include('pyrocms.theme.afterburner::partials/menu')
 
         <div id="content" class="flex-grow bg-gray-100">
 
