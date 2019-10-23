@@ -1,7 +1,6 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-@import "tailwindcss/utilities";
 
 @import "../../../node_modules/animate.css/animate.css";
 
@@ -17,4 +16,8 @@
     path {
         fill: white;
     }
+}
+
+button {
+    line-height: 1.15;
 }
