@@ -1,5 +1,4 @@
 import Vue from "vue";
-import Toaster from "./components/Messages.vue";
 
 Vue.component('toaster', Toaster);
 
@@ -8,3 +7,5 @@ const app = new Vue({
 });
 
 const Mousetrap = require('mousetrap');
+
+require('./theme/tabs')
