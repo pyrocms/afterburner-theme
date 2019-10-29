@@ -1,4 +1,3 @@
-{{-- {% htmlcompress %} --}}
 <html lang="{{ config('app.locale') }}">
 
 <head>
@@ -30,9 +29,8 @@
 </div>
 
 {{-- {% include "pyrocms.theme.afterburner::partials/footer" %}
-{#{% include "pyrocms.theme.afterburner::partials/modals" %}#}
-{% include "pyrocms.theme.afterburner::partials/assets" %} --}}
+{#{% include "pyrocms.theme.afterburner::partials/modals" %}#} --}}
+@include('pyrocms.theme.afterburner::partials/assets')
 
 </body>
 </html>
-{{-- {% endhtmlcompress %} --}}

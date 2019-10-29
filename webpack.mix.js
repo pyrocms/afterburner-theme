@@ -15,7 +15,8 @@ const tailwindcss = require('tailwindcss');
 mix
     .sass('resources/scss/theme/theme.scss', 'resources/css')
     .js([
-        'resources/js/initialize.js'
+        'resources/js/app.js',
+        'resources/js/tabs.js'
     ], 'resources/js/theme.js')
     .options({
         processCssUrls: false,
