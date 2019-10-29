@@ -15,6 +15,7 @@ const tailwindcss = require('tailwindcss');
 mix
     .sass('resources/scss/theme/theme.scss', 'resources/css')
     .js([
+        'resources/js/app.js',
         'resources/js/polyfills.js',
     ], 'resources/js/theme.js')
     .options({
