@@ -18,7 +18,7 @@
         <div id="content" class="flex-grow bg-gray-100">
 
             @include('pyrocms.theme.afterburner::partials/messages')
-            {{-- {% include "pyrocms.theme.afterburner::partials/buttons" %} --}}
+            @include('pyrocms.theme.afterburner::partials/buttons')
 
             @yield('content')
 
