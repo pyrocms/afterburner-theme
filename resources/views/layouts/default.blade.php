@@ -28,8 +28,7 @@
 
 </div>
 
-{{-- {% include "pyrocms.theme.afterburner::partials/footer" %}
-{#{% include "pyrocms.theme.afterburner::partials/modals" %}#} --}}
+{{-- {% include "pyrocms.theme.afterburner::partials/footer" %} --}}
 @include('pyrocms.theme.afterburner::partials/assets')
 
 </body>
