@@ -86,25 +86,14 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/app.js":
-/*!*****************************!*\
-  !*** ./resources/js/app.js ***!
-  \*****************************/
+/***/ "./resources/js/polyfills.js":
+/*!***********************************!*\
+  !*** ./resources/js/polyfills.js ***!
+  \***********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuL3Jlc291cmNlcy9qcy9hcHAuanMuanMiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./resources/js/app.js\n");
-
-/***/ }),
-
-/***/ "./resources/js/tabs.js":
-/*!******************************!*\
-  !*** ./resources/js/tabs.js ***!
-  \******************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("(function (window, document) {\n  document.addEventListener('click', function (event) {\n    if (event.target.matches('.tabs ul li a')) {\n      var wrapper = event.target.closest('.tabs');\n      var tabs = Array.prototype.slice.call(wrapper.querySelectorAll('ul:first-of-type li'));\n      tabs.forEach(function (tab, thing) {\n        console.log(thing);\n        tab.classlist.remove('active');\n      });\n      event.target.closest('li').classlist.add('active');\n    }\n  });\n})(window, document);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvanMvdGFicy5qcz8yOTMxIl0sIm5hbWVzIjpbIndpbmRvdyIsImRvY3VtZW50IiwiYWRkRXZlbnRMaXN0ZW5lciIsImV2ZW50IiwidGFyZ2V0IiwibWF0Y2hlcyIsIndyYXBwZXIiLCJjbG9zZXN0IiwidGFicyIsIkFycmF5IiwicHJvdG90eXBlIiwic2xpY2UiLCJjYWxsIiwicXVlcnlTZWxlY3RvckFsbCIsImZvckVhY2giLCJ0YWIiLCJ0aGluZyIsImNvbnNvbGUiLCJsb2ciLCJjbGFzc2xpc3QiLCJyZW1vdmUiLCJhZGQiXSwibWFwcGluZ3MiOiJBQUFBLENBQUMsVUFBVUEsTUFBVixFQUFrQkMsUUFBbEIsRUFBNEI7QUFFekJBLFVBQVEsQ0FBQ0MsZ0JBQVQsQ0FBMEIsT0FBMUIsRUFBbUMsVUFBVUMsS0FBVixFQUFpQjtBQUNoRCxRQUFJQSxLQUFLLENBQUNDLE1BQU4sQ0FBYUMsT0FBYixDQUFxQixlQUFyQixDQUFKLEVBQTJDO0FBRXZDLFVBQUlDLE9BQU8sR0FBR0gsS0FBSyxDQUFDQyxNQUFOLENBQWFHLE9BQWIsQ0FBcUIsT0FBckIsQ0FBZDtBQUVBLFVBQUlDLElBQUksR0FBR0MsS0FBSyxDQUFDQyxTQUFOLENBQWdCQyxLQUFoQixDQUFzQkMsSUFBdEIsQ0FDUE4sT0FBTyxDQUFDTyxnQkFBUixDQUF5QixxQkFBekIsQ0FETyxDQUFYO0FBSUFMLFVBQUksQ0FBQ00sT0FBTCxDQUFhLFVBQVVDLEdBQVYsRUFBZUMsS0FBZixFQUFzQjtBQUMvQkMsZUFBTyxDQUFDQyxHQUFSLENBQVlGLEtBQVo7QUFDQUQsV0FBRyxDQUFDSSxTQUFKLENBQWNDLE1BQWQsQ0FBcUIsUUFBckI7QUFDSCxPQUhEO0FBS0FqQixXQUFLLENBQUNDLE1BQU4sQ0FBYUcsT0FBYixDQUFxQixJQUFyQixFQUEyQlksU0FBM0IsQ0FBcUNFLEdBQXJDLENBQXlDLFFBQXpDO0FBQ0g7QUFDSixHQWhCRDtBQWtCSCxDQXBCRCxFQW9CR3JCLE1BcEJILEVBb0JXQyxRQXBCWCIsImZpbGUiOiIuL3Jlc291cmNlcy9qcy90YWJzLmpzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiKGZ1bmN0aW9uICh3aW5kb3csIGRvY3VtZW50KSB7XG5cbiAgICBkb2N1bWVudC5hZGRFdmVudExpc3RlbmVyKCdjbGljaycsIGZ1bmN0aW9uIChldmVudCkge1xuICAgICAgICBpZiAoZXZlbnQudGFyZ2V0Lm1hdGNoZXMoJy50YWJzIHVsIGxpIGEnKSkge1xuXG4gICAgICAgICAgICBsZXQgd3JhcHBlciA9IGV2ZW50LnRhcmdldC5jbG9zZXN0KCcudGFicycpO1xuXG4gICAgICAgICAgICBsZXQgdGFicyA9IEFycmF5LnByb3RvdHlwZS5zbGljZS5jYWxsKFxuICAgICAgICAgICAgICAgIHdyYXBwZXIucXVlcnlTZWxlY3RvckFsbCgndWw6Zmlyc3Qtb2YtdHlwZSBsaScpXG4gICAgICAgICAgICApO1xuXG4gICAgICAgICAgICB0YWJzLmZvckVhY2goZnVuY3Rpb24gKHRhYiwgdGhpbmcpIHtcbiAgICAgICAgICAgICAgICBjb25zb2xlLmxvZyh0aGluZyk7XG4gICAgICAgICAgICAgICAgdGFiLmNsYXNzbGlzdC5yZW1vdmUoJ2FjdGl2ZScpO1xuICAgICAgICAgICAgfSk7XG5cbiAgICAgICAgICAgIGV2ZW50LnRhcmdldC5jbG9zZXN0KCdsaScpLmNsYXNzbGlzdC5hZGQoJ2FjdGl2ZScpO1xuICAgICAgICB9XG4gICAgfSk7XG5cbn0pKHdpbmRvdywgZG9jdW1lbnQpO1xuIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./resources/js/tabs.js\n");
+eval("/**\n * Polyfill for matches()\n */\nif (!Element.prototype.matches) {\n  Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;\n}\n\nif (!Element.prototype.closest) {\n  Element.prototype.closest = function (s) {\n    var el = this;\n\n    do {\n      if (el.matches(s)) return el;\n      el = el.parentElement || el.parentNode;\n    } while (el !== null && el.nodeType === 1);\n\n    return null;\n  };\n}\n/**\n * Polyfill for closest()\n * - Relies on matches() above.\n */\n\n\nif (!Element.prototype.closest) {\n  Element.prototype.closest = function (s) {\n    var el = this;\n\n    do {\n      if (el.matches(s)) return el;\n      el = el.parentElement || el.parentNode;\n    } while (el !== null && el.nodeType === 1);\n\n    return null;\n  };\n}//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvanMvcG9seWZpbGxzLmpzP2Y4ODUiXSwibmFtZXMiOlsiRWxlbWVudCIsInByb3RvdHlwZSIsIm1hdGNoZXMiLCJtc01hdGNoZXNTZWxlY3RvciIsIndlYmtpdE1hdGNoZXNTZWxlY3RvciIsImNsb3Nlc3QiLCJzIiwiZWwiLCJwYXJlbnRFbGVtZW50IiwicGFyZW50Tm9kZSIsIm5vZGVUeXBlIl0sIm1hcHBpbmdzIjoiQUFBQTs7O0FBR0EsSUFBSSxDQUFDQSxPQUFPLENBQUNDLFNBQVIsQ0FBa0JDLE9BQXZCLEVBQWdDO0FBQzVCRixTQUFPLENBQUNDLFNBQVIsQ0FBa0JDLE9BQWxCLEdBQTRCRixPQUFPLENBQUNDLFNBQVIsQ0FBa0JFLGlCQUFsQixJQUN4QkgsT0FBTyxDQUFDQyxTQUFSLENBQWtCRyxxQkFEdEI7QUFFSDs7QUFFRCxJQUFJLENBQUNKLE9BQU8sQ0FBQ0MsU0FBUixDQUFrQkksT0FBdkIsRUFBZ0M7QUFDNUJMLFNBQU8sQ0FBQ0MsU0FBUixDQUFrQkksT0FBbEIsR0FBNEIsVUFBVUMsQ0FBVixFQUFhO0FBQ3JDLFFBQUlDLEVBQUUsR0FBRyxJQUFUOztBQUVBLE9BQUc7QUFDQyxVQUFJQSxFQUFFLENBQUNMLE9BQUgsQ0FBV0ksQ0FBWCxDQUFKLEVBQW1CLE9BQU9DLEVBQVA7QUFDbkJBLFFBQUUsR0FBR0EsRUFBRSxDQUFDQyxhQUFILElBQW9CRCxFQUFFLENBQUNFLFVBQTVCO0FBQ0gsS0FIRCxRQUdTRixFQUFFLEtBQUssSUFBUCxJQUFlQSxFQUFFLENBQUNHLFFBQUgsS0FBZ0IsQ0FIeEM7O0FBSUEsV0FBTyxJQUFQO0FBQ0gsR0FSRDtBQVNIO0FBRUQ7Ozs7OztBQUlBLElBQUksQ0FBQ1YsT0FBTyxDQUFDQyxTQUFSLENBQWtCSSxPQUF2QixFQUFnQztBQUM1QkwsU0FBTyxDQUFDQyxTQUFSLENBQWtCSSxPQUFsQixHQUE0QixVQUFVQyxDQUFWLEVBQWE7QUFDckMsUUFBSUMsRUFBRSxHQUFHLElBQVQ7O0FBRUEsT0FBRztBQUNDLFVBQUlBLEVBQUUsQ0FBQ0wsT0FBSCxDQUFXSSxDQUFYLENBQUosRUFBbUIsT0FBT0MsRUFBUDtBQUNuQkEsUUFBRSxHQUFHQSxFQUFFLENBQUNDLGFBQUgsSUFBb0JELEVBQUUsQ0FBQ0UsVUFBNUI7QUFDSCxLQUhELFFBR1NGLEVBQUUsS0FBSyxJQUFQLElBQWVBLEVBQUUsQ0FBQ0csUUFBSCxLQUFnQixDQUh4Qzs7QUFJQSxXQUFPLElBQVA7QUFDSCxHQVJEO0FBU0giLCJmaWxlIjoiLi9yZXNvdXJjZXMvanMvcG9seWZpbGxzLmpzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4gKiBQb2x5ZmlsbCBmb3IgbWF0Y2hlcygpXG4gKi9cbmlmICghRWxlbWVudC5wcm90b3R5cGUubWF0Y2hlcykge1xuICAgIEVsZW1lbnQucHJvdG90eXBlLm1hdGNoZXMgPSBFbGVtZW50LnByb3RvdHlwZS5tc01hdGNoZXNTZWxlY3RvciB8fFxuICAgICAgICBFbGVtZW50LnByb3RvdHlwZS53ZWJraXRNYXRjaGVzU2VsZWN0b3I7XG59XG5cbmlmICghRWxlbWVudC5wcm90b3R5cGUuY2xvc2VzdCkge1xuICAgIEVsZW1lbnQucHJvdG90eXBlLmNsb3Nlc3QgPSBmdW5jdGlvbiAocykge1xuICAgICAgICB2YXIgZWwgPSB0aGlzO1xuXG4gICAgICAgIGRvIHtcbiAgICAgICAgICAgIGlmIChlbC5tYXRjaGVzKHMpKSByZXR1cm4gZWw7XG4gICAgICAgICAgICBlbCA9IGVsLnBhcmVudEVsZW1lbnQgfHwgZWwucGFyZW50Tm9kZTtcbiAgICAgICAgfSB3aGlsZSAoZWwgIT09IG51bGwgJiYgZWwubm9kZVR5cGUgPT09IDEpO1xuICAgICAgICByZXR1cm4gbnVsbDtcbiAgICB9O1xufVxuXG4vKipcbiAqIFBvbHlmaWxsIGZvciBjbG9zZXN0KClcbiAqIC0gUmVsaWVzIG9uIG1hdGNoZXMoKSBhYm92ZS5cbiAqL1xuaWYgKCFFbGVtZW50LnByb3RvdHlwZS5jbG9zZXN0KSB7XG4gICAgRWxlbWVudC5wcm90b3R5cGUuY2xvc2VzdCA9IGZ1bmN0aW9uIChzKSB7XG4gICAgICAgIHZhciBlbCA9IHRoaXM7XG5cbiAgICAgICAgZG8ge1xuICAgICAgICAgICAgaWYgKGVsLm1hdGNoZXMocykpIHJldHVybiBlbDtcbiAgICAgICAgICAgIGVsID0gZWwucGFyZW50RWxlbWVudCB8fCBlbC5wYXJlbnROb2RlO1xuICAgICAgICB9IHdoaWxlIChlbCAhPT0gbnVsbCAmJiBlbC5ub2RlVHlwZSA9PT0gMSk7XG4gICAgICAgIHJldHVybiBudWxsO1xuICAgIH07XG59XG4iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./resources/js/polyfills.js\n");
 
 /***/ }),
 
@@ -120,14 +109,13 @@ eval("// removed by extract-text-webpack-plugin//# sourceURL=[module]\n//# sourc
 /***/ }),
 
 /***/ 0:
-/*!********************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/js/tabs.js ./resources/scss/theme/theme.scss ***!
-  \********************************************************************************************/
+/*!***************************************************************************!*\
+  !*** multi ./resources/js/polyfills.js ./resources/scss/theme/theme.scss ***!
+  \***************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/ryanthompson/Sites/install.local/vendor/pyrocms/afterburner-theme/resources/js/app.js */"./resources/js/app.js");
-__webpack_require__(/*! /Users/ryanthompson/Sites/install.local/vendor/pyrocms/afterburner-theme/resources/js/tabs.js */"./resources/js/tabs.js");
+__webpack_require__(/*! /Users/ryanthompson/Sites/install.local/vendor/pyrocms/afterburner-theme/resources/js/polyfills.js */"./resources/js/polyfills.js");
 module.exports = __webpack_require__(/*! /Users/ryanthompson/Sites/install.local/vendor/pyrocms/afterburner-theme/resources/scss/theme/theme.scss */"./resources/scss/theme/theme.scss");
 
 
